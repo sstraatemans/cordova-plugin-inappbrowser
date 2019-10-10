@@ -1294,7 +1294,7 @@ public class InAppBrowser extends CordovaPlugin {
             // Test for whitelisted custom scheme names like mycoolapp:// or twitteroauthresponse:// (Twitter Oauth Response)
             else if (!url.startsWith("http:") && !url.startsWith("https:") && url.matches("^[A-Za-z0-9+.-]*://.*?$")) {
                 if (allowedSchemes == null) {
-                    String allowed = preferences.getString("AllowedSchemes", null);
+                    String allowed = "toon,boxx"; //preferences.getString("AllowedSchemes", null);
                     if(allowed != null) {
                         allowedSchemes = allowed.split(",");
                     }
@@ -1388,7 +1388,7 @@ public class InAppBrowser extends CordovaPlugin {
                 // Assume that everything is HTTP at this point, because if we don't specify,
                 // it really should be.  Complain loudly about this!!!
                 LOG.e(LOG_TAG, "Possible Uncaught/Unknown URI");
-                newloc = "http://" + url;
+                newloc = url;
             }
 
             // Update the UI if we haven't already
