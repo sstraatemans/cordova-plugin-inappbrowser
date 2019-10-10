@@ -1,6 +1,6 @@
 {
   "name": "steven-cordova-plugin-inappbrowser",
-  "version": "3.1.3",
+  "version": "3.1.4",
   "description": "Cordova InAppBrowser Plugin fork with some small changes..hopefully temporary",
   "types": "./types/index.d.ts",
   "cordova": {
